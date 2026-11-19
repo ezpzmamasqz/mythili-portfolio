@@ -1,0 +1,17 @@
+{
+  // Mythili's portfolio. Hosted on Eric's (Gmail) Cloudflare account for now;
+  // to move to Mythili's own account later (re-import the repo there).
+  // The name becomes part of the free address: mythili-portfolio.<account>.workers.dev
+  "name": "mythili-portfolio",
+
+  // Pins Cloudflare's runtime behaviour to this date so nothing changes on you later.
+  "compatibility_date": "2026-11-20",
+
+  // "Serve every file in this folder as a website." No code needed.
+  "assets": {
+    "directory": "./public"
+  },
+
+  // No custom domain yet, so the free workers.dev address is the live site.
+  "workers_dev": true
+}
