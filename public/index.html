@@ -4,322 +4,421 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mythili Manoj — Portfolio</title>
-  <meta name="description" content="Mythili Manoj — video editor, social media creative and filmmaker.">
+  <meta name="description" content="Mythili Manoj — video editor, filmmaker, content strategist and singer. Her work, pinned to a wall.">
+  <meta name="theme-color" content="#5f93a1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Lexend:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Lexend:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
 
-  <header class="site-header">
+<!--
+  HOW TO EDIT
+  - Each project is one <li class="pin"> below.
+    * The visible card is the <button class="card"> part.
+    * The pop-up content is the <article class="detail"> part.
+  - data-tags="..." decides which filter buttons a card shows up under.
+  - Card colours: c-deep, c-yellow, c-cream, c-mist (see styles.css).
+-->
+
+  <header class="top">
     <a class="logo" href="#top">mythili manoj.</a>
-    <nav>
-      <a href="#work">work</a>
-      <a href="#social">social</a>
-      <a href="#screen">screen</a>
-      <a href="#audio">audio</a>
-      <a href="#contact">contact</a>
-    </nav>
+    <a class="top-contact" href="#contact">contact me.</a>
   </header>
 
   <main id="top">
+    <section class="board">
 
-    <!-- ============ HELLO ============ -->
-    <section class="hero">
-      <div class="wrap">
-        <h1>Hi.</h1>
-        <p class="hero-intro">I’m Mythili Manoj and here is a little get to know me:</p>
-        <div class="hero-bio">
-          <p>I am a creative with years of experience in social media content creation and strategy. I’ve honed my technical and creative skills across branding, short-form storytelling and audience engagement. I love everything film and media and aim to be part of the film industry. I have been fortunate enough to be part of some very exciting projects and I would like to highlight some of them.</p>
-        </div>
+      <div class="filters" role="group" aria-label="Filter projects by role">
+        <span class="hand filters-label">filter by:</span>
+        <button class="chip is-on" data-filter="all">all</button>
+        <button class="chip" data-filter="editing">editing</button>
+        <button class="chip" data-filter="directing">directing</button>
+        <button class="chip" data-filter="producing">producing</button>
+        <button class="chip" data-filter="social">social media</button>
+        <button class="chip" data-filter="strategy">strategy</button>
+        <button class="chip" data-filter="camera">camera</button>
+        <button class="chip" data-filter="music">music</button>
       </div>
-    </section>
 
-    <!-- ============ T15 MEDIA ============ -->
-    <section id="work" class="block" style="--bg:#b11f0b; --fg:#fdf1ea; --accent:#f6d65a;">
-      <div class="wrap split">
-        <div class="text">
-          <p class="kicker">video editor · 2026</p>
-          <h2>t15 media.</h2>
-          <p>In the winter of 2026, I joined T15 Media, an Emmy-nominated video production company, as a video editor intern. I moved up to become a contract editor by October. This opportunity has given me hands-on experience of how a media house functions.</p>
-          <p>I have also been able to create brand content for their socials along with a fellow intern. I have edited over 10 full client videos and over 4 brand content pieces, and shadowed shoots with videographers.</p>
-          <p class="links">
-            <a href="https://www.instagram.com/t15_media/" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://t15media.com/#aboutt15" target="_blank" rel="noopener">Website</a>
-          </p>
-        </div>
-        <div class="gallery cols-2">
-          <img src="images/t15-food.jpg" alt="Close-up of mussels cooking in a pan over a flame" loading="lazy">
-          <img src="images/t15-edit.jpg" alt="Editing suite at T15 Media" loading="lazy">
-        </div>
-      </div>
-    </section>
+      <ul class="wall" role="list">
 
-    <!-- ============ MANAS ============ -->
-    <section class="block" style="--bg:#8d71ae; --fg:#fbf7ff; --accent:#ffffff;">
-      <div class="wrap split reverse">
-        <div class="text">
-          <p class="kicker">brand content · freelance</p>
-          <h2>manas.</h2>
-          <p>Along with a friend, I created brand content for Manas, a mental and physical fitness app based in Dubai.</p>
-          <p>Ideating, creating and editing these projects has been so creatively stimulating, and I have learnt so many aspects of freelance work through the process.</p>
-          <p>While the project started with just a couple of videos, the client really loved the work and it eventually became a bigger project than it started as.</p>
-          <p>I learnt and developed videography, ad strategy, direction and editing through this wonderful experience.</p>
-        </div>
-        <div class="gallery cols-2">
-          <img class="span-2" src="images/manas-still.jpg" alt="Still from a Manas ad: a man looking at his phone in the city" loading="lazy">
-          <img src="images/manas-library.jpg" alt="Students studying in a library" loading="lazy">
-          <img src="images/manas-kitchen.jpg" alt="Behind the scenes filming in a kitchen" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ SOCIAL MEDIA ============ -->
-    <section id="social" class="block" style="--bg:#22417f; --fg:#ead35a; --accent:#ead35a;">
-      <div class="wrap">
-        <h2 class="group-title">social media projects.</h2>
-      </div>
-      <div class="wrap split">
-        <div class="text">
-          <p class="kicker">intern · summer 2025</p>
-          <h3>Switch4Schools</h3>
-          <p>Over the summer of 2025, I interned with Switch4Schools, a leading Social Emotional Learning (SEL) platform based in Brisbane, supporting the launch and promotion of their new merchandise collection.</p>
-          <p>I set up and configured a Shopify storefront integrated with their existing Wix website. I led the creation of all promotional content across their digital platforms, including social media graphics, product photography direction, short-form videos and copy.</p>
-          <p>The internship gave me hands-on experience in end-to-end digital campaign strategy and execution, an advanced understanding of Shopify, and maintaining a consistent brand identity.</p>
-          <p class="links">
-            <a href="https://www.instagram.com/switch4schools/" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://www.switch4schools.com.au/about" target="_blank" rel="noopener">Website</a>
-          </p>
-        </div>
-        <div class="gallery cols-2">
-          <img src="images/switch-video.jpg" alt="Switch4Schools merch launch video" loading="lazy">
-          <img src="images/switch-post.jpg" alt="Switch4Schools post: Something exciting is coming!" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <section class="block" style="--bg:#e5cf55; --fg:#3f3b16; --accent:#3f3b16;">
-      <div class="wrap split reverse">
-        <div class="text">
-          <p class="kicker">content strategist &amp; video editor</p>
-          <h3>Fabsay</h3>
-          <p>As content strategist and video editor, I was involved in ideating, strategising and editing content specifically for Instagram and Facebook. A skill I honed was shaping a consistent brand identity.</p>
-          <p>I’ve strategised and created a mix of informative and casual, fun short-form content, making sure their brand identity is maintained.</p>
-          <p class="links">
-            <a href="https://www.instagram.com/fabsayofficial/" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://www.facebook.com/p/Fabsay-100064042214957/" target="_blank" rel="noopener">Facebook</a>
-            <a href="https://fabsay.com/" target="_blank" rel="noopener">Website</a>
-          </p>
-        </div>
-        <div class="gallery cols-3">
-          <img src="images/fabsay-1.jpg" alt="Fabsay reel: a flowing white skirt" loading="lazy">
-          <img src="images/fabsay-2.jpg" alt="Fabsay reel: make your boring denim jeans look not so boring" loading="lazy">
-          <img src="images/fabsay-3.jpg" alt="Fabsay Instagram grid" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <section class="block" style="--bg:#3d6e80; --fg:#f2d64b; --accent:#f2d64b;">
-      <div class="wrap split">
-        <div class="text">
-          <p class="kicker">social media team member</p>
-          <h3>Brightside English</h3>
-          <p>I ideated and shot educational short-form content specifically for their Instagram profile.</p>
-          <p>What I did differently was combine social media trends with educational material to create content that brought more engagement.</p>
-          <p>I learnt a lot about what works and what doesn’t on social media (through A/B testing) and how its algorithm works.</p>
-          <p>I was their first social media content creator, and their Instagram profile has now gained <strong>over 1 million followers</strong>.</p>
-          <p class="links">
-            <a href="https://www.instagram.com/brightside_eng/" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://www.youtube.com/@BrightsideEnglish" target="_blank" rel="noopener">YouTube</a>
-            <a href="https://brightsideenglish.com/" target="_blank" rel="noopener">Website</a>
-          </p>
-        </div>
-        <div class="gallery cols-3">
-          <img src="images/brightside-1.jpg" alt="Brightside English reel: have you ever come across the phrase" loading="lazy">
-          <img src="images/brightside-2.jpg" alt="Brightside English reel: today I'm going to test your English level" loading="lazy">
-          <img src="images/brightside-3.jpg" alt="Brightside English reel: eye to eye" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <section class="block" style="--bg:#4b1f55; --fg:#fbf3ff; --accent:#f2d64b;">
-      <div class="wrap split reverse">
-        <div class="text">
-          <p class="kicker">2018 – now</p>
-          <h3>personal social media platform.</h3>
-          <p>I have been creating content on my personal Instagram account for the past 9 years. One of my major learnings was the importance of building a community, and that gathering a following takes time and consistency.</p>
-          <p>I have so much fun posting everything creative that comes to my head and engaging with my audience.</p>
-          <p class="stat"><span>904K</span> views in 30 days</p>
-          <p class="links">
-            <a href="https://www.instagram.com/mythileee_/" target="_blank" rel="noopener">@mythileee_</a>
-          </p>
-        </div>
-        <div class="gallery cols-1 narrow">
-          <img src="images/personal-grid.jpg" alt="Grid of reels from Mythili's Instagram, with view counts" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <section class="block" style="--bg:#7a8634; --fg:#4a0a10; --accent:#4a0a10;">
-      <div class="wrap split">
-        <div class="text">
-          <p class="kicker">30 days · 30 posts</p>
-          <h3>a social media experiment.</h3>
-          <p>Last summer I started a 30-day social media challenge where I posted every day for 30 days, fresh on a new account, to learn and understand how algorithms and the unwritten rules of social media work.</p>
-          <p>It was also a test to see how my creativity flows and sustains. While it was hard, I was determined to finish the challenge. I experimented with the type of content I posted to learn what worked and what didn’t. Two of my videos went semi-viral, with one of them hitting <strong>close to a million views</strong>.</p>
-          <p>Unfortunately, the one I worked on the most didn’t do as well as I thought it would. But this gave me insights into the exact pattern that works for social media. Through this challenge I gained crucial technical skills, but more importantly, knowledge about social media algorithms and patterns.</p>
-          <p class="links">
-            <a href="https://www.instagram.com/mythiliexperiments_/" target="_blank" rel="noopener">See the account</a>
-          </p>
-        </div>
-        <div class="gallery cols-2 experiment">
-          <img src="images/experiment-1.jpg" alt="Reel: Mythili on a train platform, 'in the past'" loading="lazy">
-          <img src="images/experiment-2.jpg" alt="Reel: Flinders Street station platform, 'taking the PT'" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ SCREEN ============ -->
-    <section id="screen" class="block" style="--bg:#873733; --fg:#f4e9b8; --accent:#f4e9b8;">
-      <div class="wrap">
-        <h2 class="group-title">screen projects.</h2>
-        <ul class="credits">
-          <li>Directed <a href="https://drive.google.com/file/d/1QX-fFZBHp4BM-bJ_IuiJtTnDk5x7Umfh/view?usp=drive_link" target="_blank" rel="noopener"><em>The Story Of a Lotus</em></a>, a character study on Melanie Vairawanathan.</li>
-          <li>Produced <a href="https://drive.google.com/file/d/1OyzteA2zHaRAzI5gvs2ofRyHMz_Qjjax/view?usp=sharing" target="_blank" rel="noopener"><em>Hang On</em></a>, a docufiction of a couple’s experience scuba diving.</li>
-          <li>1st AD on the set of <a href="https://www.instagram.com/classified_thefilm/" target="_blank" rel="noopener"><em>Classified</em></a>, set to be released December 2026.</li>
-          <li>1st AD, editor and publicist for <a href="https://www.instagram.com/p/DdpVYy5HZvN/" target="_blank" rel="noopener"><em>Fan Out</em></a>, an MFS student film initiative.</li>
-          <li>Producer and colourist for <em>Wrapped</em>, a student film initiative.</li>
-          <li>Creative producer, co-editor and co-colourist of <a href="https://youtu.be/jiBiAMDs1SI" target="_blank" rel="noopener"><em>You’re dead to me, sis</em></a>, a student film initiative.</li>
-          <li>Acted in <a href="https://www.youtube.com/watch?v=hbiflnwVYPU" target="_blank" rel="noopener"><em>The Identity</em></a> (2021), directed by Dr Chandra Vadhana R.</li>
-          <li>Editor of <em>Fool’s Gold</em>, a 48-hour film project.</li>
-        </ul>
-        <div class="gallery cols-3 screen">
-          <img src="images/screen-lotus.jpg" alt="Title card: The Story Of a Lotus" loading="lazy">
-          <img src="images/screen-hangon.jpg" alt="Title card: Hang On" loading="lazy">
-          <img src="images/screen-fanout.jpg" alt="Mythili at the Fan Out premiere" loading="lazy">
-          <img src="images/screen-party.jpg" alt="On set of a student film" loading="lazy">
-          <img src="images/screen-edit.jpg" alt="Editing Fan Out" loading="lazy">
-          <img src="images/screen-set.jpg" alt="Mythili on set with a slate" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <section class="block" style="--bg:#76668f; --fg:#2b2320; --accent:#2b2320;">
-      <div class="wrap split">
-        <div class="text">
-          <h3>stop motion mixed media project &amp; video essays.</h3>
-          <p class="links stacked">
-            <a href="https://drive.google.com/file/d/1EvRcKZTc5hnspmqIDC-93LdDBYHlG_kT/view?usp=drive_link" target="_blank" rel="noopener">Social media and the gaze</a>
-            <a href="https://drive.google.com/file/d/1DA_spVfIWZwYQTbJ7vYVziP4ESEf1WQg/view?usp=sharing" target="_blank" rel="noopener">Gun Crazy and the Femme Fatale</a>
-          </p>
-          <p><strong>My most treasured project:</strong> a mixed media stop motion animation video that was posted to my personal Instagram account.</p>
-          <p><strong>Skills I gained:</strong> creative direction, screenwriting, editing (Adobe Creative Suite), video production, videography, storyboarding.</p>
-        </div>
-        <div class="gallery cols-2">
-          <img class="tall" src="images/video-record.jpg" alt="Stop motion still: a spinning vinyl record" loading="lazy">
-          <div class="stack">
-            <img src="images/video-gaze.jpg" alt="Video essay frames comparing the male gaze and the female gaze" loading="lazy">
-            <img src="images/video-identity.jpg" alt="Poster for The Identity, with Mythili as Meenu" loading="lazy">
+        <!-- ================= INTRO ================= -->
+        <li class="intro">
+          <div class="intro-head">
+            <h1 class="hi">Hi.</h1>
+            <img class="cutout" src="images/cut-jacket.webp" alt="Mythili in a leather jacket, smiling">
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ FREELANCE ============ -->
-    <section class="block" style="--bg:#5c2005; --fg:#f4e4b4; --accent:#f4e4b4;">
-      <div class="wrap">
-        <h2 class="group-title">freelance projects.</h2>
-      </div>
-      <div class="wrap split">
-        <div class="text">
-          <p class="kicker">content planning &amp; editing · nov–dec 2025</p>
-          <h3>Esther Anil</h3>
-          <p>Esther Anil is a well-known actress in the South Indian film industry with a large and engaged online following. Over November and December 2025, I worked with her to help shape an exclusive subscriber-only content strategy: thinking through what kind of content would genuinely resonate with her audience, how to structure it, and how to make the rollout feel intentional rather than rushed. I edited all the content.</p>
-          <blockquote>“When I started the whole ‘subscribers’ thing, I had no idea what I’d even post. Then it suddenly blew up — over 1,000 subscribers later, here we are.”<cite>— Esther Anil</cite></blockquote>
-        </div>
-        <div class="gallery cols-1">
-          <img src="images/esther.jpg" alt="Still from Esther Anil's 'get unready with me' video" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <section class="block" style="--bg:#4f0612; --fg:#f4e4b4; --accent:#f4e4b4;">
-      <div class="wrap split reverse">
-        <div class="text">
-          <p class="kicker">director &amp; editor</p>
-          <h3>Rodney Beach</h3>
-          <p>A special birthday video that I directed and edited for Rodney Beach’s 50th birthday, at his birthday party. It was a close and intimate setting, so an intimate interview-style video just made sense. The video was posted to the client’s socials.</p>
-        </div>
-        <div class="gallery cols-1">
-          <img src="images/rodney.jpg" alt="Rod's 50th birthday title card with balloons" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <section class="block" style="--bg:#6d2650; --fg:#f4e4b4; --accent:#f4e4b4;">
-      <div class="wrap split">
-        <div class="text">
-          <p class="kicker">event videographer</p>
-          <h3>Nina Christian</h3>
-          <p>Nina Christian is an author and business figure who recently launched her book. I came on as the videographer for the day, covering the full event from start to finish. I shot over 200 clips across the venue, capturing the atmosphere, the crowd and key moments.</p>
-        </div>
-        <div class="gallery cols-2">
-          <div class="stack">
-            <img src="images/nina-1.jpg" alt="Mythili filming at the book launch" loading="lazy">
-            <img src="images/nina-2.jpg" alt="Mythili with Nina Christian and a guest" loading="lazy">
+          <div class="note">
+            <p class="note-title">I’m Mythili and here is a little get to know me:</p>
+            <p>I am a creative with years of experience in social media content creation and strategy. I’ve honed my technical and creative skills across branding, short-form storytelling and audience engagement. I love everything film and media and aim to be part of the film industry. I have been fortunate enough to be part of some very exciting projects and I would like to highlight some of them.</p>
           </div>
-          <img class="tall" src="images/nina-3.jpg" alt="Copies of Solar System Marketing by Nina Christian" loading="lazy">
-        </div>
-      </div>
+          <p class="hand hint">tap a card to see the full project ↘</p>
+        </li>
+
+        <!-- ================= T15 MEDIA ================= -->
+        <li class="pin c-deep" data-tags="editing camera social">
+          <button class="card" type="button">
+            <img src="images/t15-edit.jpg" alt="">
+            <span class="card-title">t15 media.</span>
+            <span class="card-role">Video editor</span>
+          </button>
+          <article class="detail" hidden>
+            <p class="kicker">video editor intern → contract editor · 2026</p>
+            <h2>t15 media.</h2>
+            <div class="detail-grid">
+              <div>
+                <p>In the winter of 2026, I joined T15 Media, an Emmy-nominated video production company, as a video editor intern. I moved up to become a contract editor by October. This opportunity has given me hands-on experience of how a media house functions.</p>
+                <p>I have also been able to create brand content for their socials along with a fellow intern. I have edited over 10 full client videos and over 4 brand content pieces, and shadowed shoots with videographers.</p>
+                <div class="stats"><p><b>10+</b>client videos edited</p><p><b>4+</b>brand content pieces</p></div>
+                <p class="links"><a href="https://www.instagram.com/t15_media/" target="_blank" rel="noopener">Instagram</a><a href="https://t15media.com/#aboutt15" target="_blank" rel="noopener">Website</a></p>
+              </div>
+              <div class="photos">
+                <img src="images/t15-edit.jpg" alt="Editing suite at T15 Media" loading="lazy">
+                <img src="images/t15-food.jpg" alt="Close-up of mussels cooking in a pan over a flame" loading="lazy">
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- ================= MANAS ================= -->
+        <li class="pin c-mist" data-tags="editing directing camera strategy social">
+          <button class="card" type="button">
+            <img src="images/manas-still.jpg" alt="">
+            <span class="card-title">manas.</span>
+            <span class="card-role">Ideation, videography, direction, editing</span>
+          </button>
+          <article class="detail" hidden>
+            <p class="kicker">brand content · freelance</p>
+            <h2>manas.</h2>
+            <div class="detail-grid">
+              <div>
+                <p>Along with a friend, I created brand content for Manas, a mental and physical fitness app based in Dubai.</p>
+                <p>Ideating, creating and editing these projects has been so creatively stimulating, and I have learnt so many aspects of freelance work through the process.</p>
+                <p>While the project started with just a couple of videos, the client really loved the work and it eventually became a bigger project than it started as.</p>
+                <p>I learnt and developed videography, ad strategy, direction and editing through this wonderful experience.</p>
+              </div>
+              <div class="photos">
+                <img class="wide" src="images/manas-still.jpg" alt="Still from a Manas ad: a man looking at his phone in the city" loading="lazy">
+                <img src="images/manas-library.jpg" alt="Students studying in a library" loading="lazy">
+                <img src="images/manas-kitchen.jpg" alt="Behind the scenes filming in a kitchen" loading="lazy">
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- ================= SWITCH4SCHOOLS ================= -->
+        <li class="pin c-yellow" data-tags="social strategy camera">
+          <button class="card" type="button">
+            <img src="images/switch-post.jpg" alt="">
+            <span class="card-title">switch4schools.</span>
+            <span class="card-role">Social media &amp; launch content</span>
+          </button>
+          <article class="detail" hidden>
+            <p class="kicker">intern · summer 2025</p>
+            <h2>switch4schools.</h2>
+            <div class="detail-grid">
+              <div>
+                <p>Over the summer of 2025, I interned with Switch4Schools, a leading Social Emotional Learning (SEL) platform based in Brisbane, supporting the launch and promotion of their new merchandise collection.</p>
+                <p>I set up and configured a Shopify storefront integrated with their existing Wix website. I led the creation of all promotional content across their digital platforms, including social media graphics, product photography direction, short-form videos and copy.</p>
+                <p>The internship gave me hands-on experience in end-to-end digital campaign strategy and execution, an advanced understanding of Shopify, and maintaining a consistent brand identity.</p>
+                <p class="links"><a href="https://www.instagram.com/switch4schools/" target="_blank" rel="noopener">Instagram</a><a href="https://www.switch4schools.com.au/about" target="_blank" rel="noopener">Website</a></p>
+              </div>
+              <div class="photos">
+                <img src="images/switch-video.jpg" alt="Switch4Schools merch launch video" loading="lazy">
+                <img src="images/switch-post.jpg" alt="Switch4Schools post: Something exciting is coming!" loading="lazy">
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- ================= FABSAY ================= -->
+        <li class="pin c-cream" data-tags="editing strategy social">
+          <button class="card" type="button">
+            <img src="images/fabsay-2.jpg" alt="">
+            <span class="card-title">fabsay.</span>
+            <span class="card-role">Content strategist &amp; video editor</span>
+          </button>
+          <article class="detail" hidden>
+            <p class="kicker">content strategist &amp; video editor</p>
+            <h2>fabsay.</h2>
+            <div class="detail-grid">
+              <div>
+                <p>As content strategist and video editor, I was involved in ideating, strategising and editing content specifically for Instagram and Facebook. A skill I honed was shaping a consistent brand identity.</p>
+                <p>I’ve strategised and created a mix of informative and casual, fun short-form content, making sure their brand identity is maintained.</p>
+                <p class="links"><a href="https://www.instagram.com/fabsayofficial/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/p/Fabsay-100064042214957/" target="_blank" rel="noopener">Facebook</a><a href="https://fabsay.com/" target="_blank" rel="noopener">Website</a></p>
+              </div>
+              <div class="photos three">
+                <img src="images/fabsay-1.jpg" alt="Fabsay reel: a flowing white skirt" loading="lazy">
+                <img src="images/fabsay-2.jpg" alt="Fabsay reel: make your boring denim jeans look not so boring" loading="lazy">
+                <img src="images/fabsay-3.jpg" alt="Fabsay Instagram grid" loading="lazy">
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- ================= BRIGHTSIDE ================= -->
+        <li class="pin c-deep" data-tags="social camera strategy">
+          <button class="card" type="button">
+            <img src="images/brightside-2.jpg" alt="">
+            <span class="card-title">brightside english.</span>
+            <span class="card-role">First social media content creator</span>
+          </button>
+          <article class="detail" hidden>
+            <p class="kicker">social media team member</p>
+            <h2>brightside english.</h2>
+            <div class="detail-grid">
+              <div>
+                <p>I ideated and shot educational short-form content specifically for their Instagram profile.</p>
+                <p>What I did differently was combine social media trends with educational material to create content that brought more engagement.</p>
+                <p>I learnt a lot about what works and what doesn’t on social media (through A/B testing) and how its algorithm works.</p>
+                <p>I was their first social media content creator, and their Instagram profile has now gained over 1 million followers.</p>
+                <div class="stats"><p><b>1M+</b>followers today</p></div>
+                <p class="links"><a href="https://www.instagram.com/brightside_eng/" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@BrightsideEnglish" target="_blank" rel="noopener">YouTube</a><a href="https://brightsideenglish.com/" target="_blank" rel="noopener">Website</a></p>
+              </div>
+              <div class="photos three">
+                <img src="images/brightside-1.jpg" alt="Brightside English reel: have you ever come across the phrase" loading="lazy">
+                <img src="images/brightside-2.jpg" alt="Brightside English reel: today I'm going to test your English level" loading="lazy">
+                <img src="images/brightside-3.jpg" alt="Brightside English reel: eye to eye" loading="lazy">
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- ================= MY INSTAGRAM ================= -->
+        <li class="pin c-yellow" data-tags="social editing">
+          <button class="card" type="button">
+            <img src="images/personal-grid.jpg" alt="">
+            <span class="card-title">my instagram.</span>
+            <span class="card-role">Creator, 2018 – now</span>
+          </button>
+          <article class="detail" hidden>
+            <p class="kicker">creator · 2018 – now</p>
+            <h2>my instagram.</h2>
+            <div class="detail-grid">
+              <div>
+                <p>I have been creating content on my personal Instagram account for the past 9 years. One of my major learnings was the importance of building a community, and that gathering a following takes time and consistency.</p>
+                <p>I have so much fun posting everything creative that comes to my head and engaging with my audience.</p>
+                <div class="stats"><p><b>904K</b>views in 30 days</p><p><b>9</b>years creating</p></div>
+                <p class="links"><a href="https://www.instagram.com/mythileee_/" target="_blank" rel="noopener">@mythileee_</a></p>
+              </div>
+              <div class="photos one">
+                <img src="images/personal-grid.jpg" alt="Grid of reels from Mythili's Instagram, with view counts" loading="lazy">
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- ================= THE EXPERIMENT ================= -->
+        <li class="pin c-mist" data-tags="social strategy editing">
+          <button class="card" type="button">
+            <img src="images/experiment-1.jpg" alt="">
+            <span class="card-title">the experiment.</span>
+            <span class="card-role">30 days, 30 posts</span>
+          </button>
+          <article class="detail" hidden>
+            <p class="kicker">30 days · 30 posts</p>
+            <h2>a social media experiment.</h2>
+            <div class="detail-grid">
+              <div>
+                <p>Last summer I started a 30-day social media challenge where I posted every day for 30 days, fresh on a new account, to learn and understand how algorithms and the unwritten rules of social media work.</p>
+                <p>It was also a test to see how my creativity flows and sustains. While it was hard, I was determined to finish the challenge. I experimented with the type of content I posted to learn what worked and what didn’t. Two of my videos went semi-viral, with one of them hitting close to a million views.</p>
+                <p>Unfortunately, the one I worked on the most didn’t do as well as I thought it would. But this gave me insights into the exact pattern that works for social media. Through this challenge I gained crucial technical skills, but more importantly, knowledge about social media algorithms and patterns.</p>
+                <div class="stats"><p><b>30</b>days in a row</p><p><b>~1M</b>views on one video</p></div>
+                <p class="links"><a href="https://www.instagram.com/mythiliexperiments_/" target="_blank" rel="noopener">See the account</a></p>
+              </div>
+              <div class="photos">
+                <img src="images/experiment-1.jpg" alt="Reel: Mythili on a train platform, 'in the past'" loading="lazy">
+                <img src="images/experiment-2.jpg" alt="Reel: Flinders Street station platform, 'taking the PT'" loading="lazy">
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- ================= SCREEN PROJECTS ================= -->
+        <li class="pin c-deep" data-tags="directing producing editing">
+          <button class="card" type="button">
+            <img src="images/screen-set.jpg" alt="">
+            <span class="card-title">screen projects.</span>
+            <span class="card-role">Director, producer, 1st AD, editor, colourist</span>
+          </button>
+          <article class="detail" hidden>
+            <p class="kicker">film &amp; screen</p>
+            <h2>screen projects.</h2>
+            <ul class="credits">
+              <li>Directed <a href="https://drive.google.com/file/d/1QX-fFZBHp4BM-bJ_IuiJtTnDk5x7Umfh/view?usp=drive_link" target="_blank" rel="noopener"><em>The Story Of a Lotus</em></a>, a character study on Melanie Vairawanathan.</li>
+              <li>Produced <a href="https://drive.google.com/file/d/1OyzteA2zHaRAzI5gvs2ofRyHMz_Qjjax/view?usp=sharing" target="_blank" rel="noopener"><em>Hang On</em></a>, a docufiction of a couple’s experience scuba diving.</li>
+              <li>1st AD on the set of <a href="https://www.instagram.com/classified_thefilm/" target="_blank" rel="noopener"><em>Classified</em></a>, set to be released December 2026.</li>
+              <li>1st AD, editor and publicist for <a href="https://www.instagram.com/p/DdpVYy5HZvN/" target="_blank" rel="noopener"><em>Fan Out</em></a>, an MFS student film initiative.</li>
+              <li>Producer and colourist for <em>Wrapped</em>, a student film initiative.</li>
+              <li>Creative producer, co-editor and co-colourist of <a href="https://youtu.be/jiBiAMDs1SI" target="_blank" rel="noopener"><em>You’re dead to me, sis</em></a>, a student film initiative.</li>
+              <li>Acted in <a href="https://www.youtube.com/watch?v=hbiflnwVYPU" target="_blank" rel="noopener"><em>The Identity</em></a> (2021), directed by Dr Chandra Vadhana R.</li>
+              <li>Editor of <em>Fool’s Gold</em>, a 48-hour film project.</li>
+            </ul>
+            <div class="photos three">
+              <img src="images/screen-lotus.jpg" alt="Title card: The Story Of a Lotus" loading="lazy">
+              <img src="images/screen-hangon.jpg" alt="Title card: Hang On" loading="lazy">
+              <img src="images/screen-fanout.jpg" alt="Mythili at the Fan Out premiere" loading="lazy">
+              <img src="images/screen-party.jpg" alt="On set of a student film" loading="lazy">
+              <img src="images/screen-edit.jpg" alt="Editing Fan Out" loading="lazy">
+              <img src="images/screen-set.jpg" alt="Mythili on set with a slate" loading="lazy">
+            </div>
+          </article>
+        </li>
+
+        <!-- ================= STOP MOTION ================= -->
+        <li class="pin c-cream" data-tags="directing editing">
+          <button class="card" type="button">
+            <img src="images/video-record.jpg" alt="">
+            <span class="card-title">stop motion &amp; essays.</span>
+            <span class="card-role">Creative direction, screenwriting, editing</span>
+          </button>
+          <article class="detail" hidden>
+            <p class="kicker">my most treasured project</p>
+            <h2>stop motion mixed media project &amp; video essays.</h2>
+            <div class="detail-grid">
+              <div>
+                <p>A mixed media stop motion animation video that was posted to my personal Instagram account.</p>
+                <p><strong>Video essays:</strong></p>
+                <p class="links"><a href="https://drive.google.com/file/d/1EvRcKZTc5hnspmqIDC-93LdDBYHlG_kT/view?usp=drive_link" target="_blank" rel="noopener">Social media and the gaze</a><a href="https://drive.google.com/file/d/1DA_spVfIWZwYQTbJ7vYVziP4ESEf1WQg/view?usp=sharing" target="_blank" rel="noopener">Gun Crazy and the Femme Fatale</a></p>
+                <p><strong>Skills I gained:</strong> creative direction, screenwriting, editing (Adobe Creative Suite), video production, videography, storyboarding.</p>
+              </div>
+              <div class="photos">
+                <img src="images/video-record.jpg" alt="Stop motion still: a spinning vinyl record" loading="lazy">
+                <img src="images/video-identity.jpg" alt="Poster for The Identity, with Mythili as Meenu" loading="lazy">
+                <img class="wide" src="images/video-gaze.jpg" alt="Video essay frames comparing the male gaze and the female gaze" loading="lazy">
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- ================= ESTHER ANIL ================= -->
+        <li class="pin c-mist" data-tags="strategy editing social">
+          <button class="card" type="button">
+            <img src="images/esther.jpg" alt="">
+            <span class="card-title">esther anil.</span>
+            <span class="card-role">Content strategy &amp; editing</span>
+          </button>
+          <article class="detail" hidden>
+            <p class="kicker">freelance · nov – dec 2025</p>
+            <h2>esther anil.</h2>
+            <div class="detail-grid">
+              <div>
+                <p>Esther Anil is a well-known actress in the South Indian film industry with a large and engaged online following. Over November and December 2025, I worked with her to help shape an exclusive subscriber-only content strategy: thinking through what kind of content would genuinely resonate with her audience, how to structure it, and how to make the rollout feel intentional rather than rushed. I edited all the content.</p>
+                <blockquote>“When I started the whole ‘subscribers’ thing, I had no idea what I’d even post. Then it suddenly blew up — over 1,000 subscribers later, here we are.”<cite>— Esther Anil</cite></blockquote>
+              </div>
+              <div class="photos one">
+                <img src="images/esther.jpg" alt="Still from Esther Anil's 'get unready with me' video" loading="lazy">
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- ================= RODNEY BEACH ================= -->
+        <li class="pin c-yellow" data-tags="directing editing camera">
+          <button class="card" type="button">
+            <img src="images/rodney.jpg" alt="">
+            <span class="card-title">rodney beach’s 50th.</span>
+            <span class="card-role">Director &amp; editor</span>
+          </button>
+          <article class="detail" hidden>
+            <p class="kicker">freelance · director &amp; editor</p>
+            <h2>rodney beach’s 50th.</h2>
+            <div class="detail-grid">
+              <div>
+                <p>A special birthday video that I directed and edited for Rodney Beach’s 50th birthday, at his birthday party. It was a close and intimate setting, so an intimate interview-style video just made sense. The video was posted to the client’s socials.</p>
+              </div>
+              <div class="photos one">
+                <img src="images/rodney.jpg" alt="Rod's 50th birthday title card with balloons" loading="lazy">
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- ================= NINA CHRISTIAN ================= -->
+        <li class="pin c-deep" data-tags="camera">
+          <button class="card" type="button">
+            <img src="images/nina-2.jpg" alt="">
+            <span class="card-title">nina christian.</span>
+            <span class="card-role">Event videographer</span>
+          </button>
+          <article class="detail" hidden>
+            <p class="kicker">freelance · event videographer</p>
+            <h2>nina christian.</h2>
+            <div class="detail-grid">
+              <div>
+                <p>Nina Christian is an author and business figure who recently launched her book. I came on as the videographer for the day, covering the full event from start to finish. I shot over 200 clips across the venue, capturing the atmosphere, the crowd and key moments.</p>
+                <div class="stats"><p><b>200+</b>clips shot</p></div>
+              </div>
+              <div class="photos">
+                <img src="images/nina-1.jpg" alt="Mythili filming at the book launch" loading="lazy">
+                <img src="images/nina-3.jpg" alt="Copies of Solar System Marketing by Nina Christian" loading="lazy">
+                <img class="wide" src="images/nina-2.jpg" alt="Mythili with Nina Christian and a guest" loading="lazy">
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- ================= AUDIO ================= -->
+        <li class="pin c-cream pin-cut" data-tags="music producing">
+          <button class="card" type="button">
+            <img class="card-cutout" src="images/cut-mic.webp" alt="">
+            <span class="card-title">audio projects.</span>
+            <span class="card-role">Singer, producer, songwriter</span>
+          </button>
+          <article class="detail" hidden>
+            <p class="kicker">music</p>
+            <h2>audio projects.</h2>
+            <div class="detail-grid">
+              <div>
+                <p>I have been super passionate about music since a very young age and have always been singing and producing my favourite songs. I was never shy to sing in front of people and have never said no to a stage.</p>
+                <p>My first original song, ‘Older’ (2025), has been in the works.</p>
+                <p class="links"><a href="https://drive.google.com/drive/folders/18rm1avkcxwz26N1locbiGab7UiXWrZgZ" target="_blank" rel="noopener">Covers produced by me</a><a href="https://drive.google.com/file/d/1JDJLonWPPyyRXlWiiMHHlNltDH2TnUWD/view?usp=sharing" target="_blank" rel="noopener">‘Older’ — first draft</a></p>
+                <p><strong>Skills I gained:</strong> audio production, vocal arrangement, songwriting, guitar.</p>
+              </div>
+              <div class="photos">
+                <img class="wide" src="images/audio-cover.jpg" alt="Mythili singing a Mitski cover on electric guitar" loading="lazy">
+                <img src="images/audio-stage.jpg" alt="Mythili performing on stage under purple lights" loading="lazy">
+                <img src="images/audio-piano.jpg" alt="Mythili singing at a keyboard" loading="lazy">
+              </div>
+            </div>
+          </article>
+        </li>
+
+      </ul>
     </section>
 
-    <!-- ============ AUDIO ============ -->
-    <section id="audio" class="block" style="--bg:#6b80b3; --fg:#4a200e; --accent:#4a200e;">
-      <div class="wrap split reverse">
-        <div class="text">
-          <h2 class="group-title">audio projects.</h2>
-          <p><a href="https://drive.google.com/drive/folders/18rm1avkcxwz26N1locbiGab7UiXWrZgZ" target="_blank" rel="noopener">Covers completely produced by me</a>.</p>
-          <p>I have been super passionate about music since a very young age and have always been singing and producing my favourite songs. I was never shy to sing in front of people and have never said no to a stage.</p>
-          <p>My first original song, ‘Older’ (2025), has been in the works. <a href="https://drive.google.com/file/d/1JDJLonWPPyyRXlWiiMHHlNltDH2TnUWD/view?usp=sharing" target="_blank" rel="noopener">Listen to the first draft</a>.</p>
-          <p><strong>Skills I gained:</strong> audio production, vocal arrangement, songwriting, guitar.</p>
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <div>
+          <h2>contact me.</h2>
+          <dl class="contact-list">
+            <dt class="hand">email</dt><dd><a href="mailto:mythilimanoj@gmail.com">mythilimanoj@gmail.com</a></dd>
+            <dt class="hand">linkedin</dt><dd><a href="http://www.linkedin.com/in/mythili-manoj-b6711932a" target="_blank" rel="noopener">Mythili Manoj</a></dd>
+            <dt class="hand">instagram</dt><dd><a href="https://www.instagram.com/mythileee_/" target="_blank" rel="noopener">@mythileee_</a></dd>
+          </dl>
+          <p class="thanks">Thank you for reading till the end. You have won yourself a few fun facts about me!</p>
         </div>
-        <div class="gallery cols-2">
-          <img class="span-2" src="images/audio-cover.jpg" alt="Mythili singing a Mitski cover on electric guitar" loading="lazy">
-          <img src="images/audio-stage.jpg" alt="Mythili performing on stage under purple lights" loading="lazy">
-          <img src="images/audio-piano.jpg" alt="Mythili singing at a keyboard" loading="lazy">
-        </div>
+        <img class="cutout contact-cutout" src="images/cut-guitar.webp" alt="Mythili laughing with a blue electric guitar" loading="lazy">
       </div>
+      <ul class="facts" role="list">
+        <li class="hand">I love cats (not the movie)</li>
+        <li class="hand">I consider myself to be a creative</li>
+        <li class="hand">I have never experienced stage fear (I’m a singer)</li>
+      </ul>
     </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section id="contact" class="block contact" style="--bg:#2c4f98; --fg:#ead34f; --accent:#ead34f;">
-      <div class="wrap split">
-        <div class="text">
-          <h2 class="group-title">contact me.</h2>
-          <ul class="contact-list">
-            <li>Email: <a href="mailto:mythilimanoj@gmail.com">mythilimanoj@gmail.com</a></li>
-            <li>LinkedIn: <a href="http://www.linkedin.com/in/mythili-manoj-b6711932a" target="_blank" rel="noopener">Mythili Manoj</a></li>
-            <li>Instagram: <a href="https://www.instagram.com/mythileee_/" target="_blank" rel="noopener">mythileee_</a></li>
-          </ul>
-          <p>Thank you for reading till the end. You have won yourself a few fun facts about me!</p>
-          <ul class="fun-facts">
-            <li>I love cats (not the movie)</li>
-            <li>I consider myself to be a creative</li>
-            <li>I have never experienced stage fear (I’m a singer)</li>
-          </ul>
-        </div>
-        <div class="gallery cols-1">
-          <img src="images/contact-collage.jpg" alt="Collage of photos of Mythili, including one with a blue guitar" loading="lazy">
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <footer class="site-footer">
-    <p>© 2026 Mythili Manoj</p>
-  </footer>
+  <footer class="footer">© 2026 Mythili Manoj</footer>
+
+  <!-- Pop-up that shows a project's full details -->
+  <dialog class="panel" id="panel" aria-label="Project details">
+    <button class="panel-close hand" type="button">back to the wall ✕</button>
+    <div class="panel-body"></div>
+  </dialog>
 
 </body>
 </html>
