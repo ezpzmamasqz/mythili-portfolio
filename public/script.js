@@ -50,18 +50,23 @@
       if (row && Math.abs(p[1] - row[0][1]) < 90) row.push(p); else rows.push([p]);
     });
     const ordered = rows.flatMap((row, i) => row.sort((a, b) => (i % 2 ? b[0] - a[0] : a[0] - b[0])));
-    const path = document.createElementNS(NS, "path");
-    path.setAttribute("d", stringPath(ordered));
-    svg.append(path);
-    if (animate && !reduceMotion) {
-      const len = path.getTotalLength();
-      path.style.strokeDasharray = len;
-      path.style.strokeDashoffset = len;
-      path.getBoundingClientRect(); // start the animation from the hidden state
-      path.style.transition = `stroke-dashoffset ${Math.min(2.2, 0.5 + len / 2500)}s cubic-bezier(.45,.05,.3,1)`;
-      path.style.strokeDashoffset = "0";
-      path.addEventListener("transitionend", () => { path.style.strokeDasharray = "none"; }, { once: true });
-    }
+    // A soft dark line under the yellow string keeps it visible on yellow cards.
+    const d = stringPath(ordered);
+    ["shade", "string"].forEach((cls) => {
+      const path = document.createElementNS(NS, "path");
+      path.setAttribute("class", cls);
+      path.setAttribute("d", d);
+      svg.append(path);
+      if (animate && !reduceMotion) {
+        const len = path.getTotalLength();
+        path.style.strokeDasharray = len;
+        path.style.strokeDashoffset = len;
+        path.getBoundingClientRect(); // start the animation from the hidden state
+        path.style.transition = `stroke-dashoffset ${Math.min(2.2, 0.5 + len / 2500)}s cubic-bezier(.45,.05,.3,1)`;
+        path.style.strokeDashoffset = "0";
+        path.addEventListener("transitionend", () => { path.style.strokeDasharray = "none"; }, { once: true });
+      }
+    });
   }
 
   function applyFilter(tag) {
@@ -99,7 +104,7 @@
   // ---- Pop-up panel ----
   const panel = document.getElementById("panel");
   const body = panel.querySelector(".panel-body");
-  const colours = ["c-deep", "c-navy", "c-blue", "c-aqua"];
+  const colours = ["c-teal", "c-yellow", "c-white"];
   let lastCard = null;
 
   pins.forEach((pin) => {
@@ -110,7 +115,7 @@
       lastCard = card;
       body.innerHTML = detail.innerHTML;
       panel.classList.remove(...colours);
-      panel.classList.add(colours.find((c) => pin.classList.contains(c)) || "c-deep");
+      panel.classList.add(colours.find((c) => pin.classList.contains(c)) || "c-teal");
       panel.setAttribute("aria-label", pin.querySelector(".card-title").textContent);
       panel.showModal();
       body.scrollTop = 0;
