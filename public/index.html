@@ -4,15 +4,86 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mythili Manoj — Portfolio</title>
-  <style>
-    body { margin: 0; min-height: 100vh; display: grid; place-content: center;
-           text-align: center; font-family: system-ui, sans-serif;
-           background: #fff; color: #111; }
-    h1 { margin: 0 0 .5rem; font-size: clamp(2rem, 6vw, 3.5rem); }
-  </style>
+  <meta name="description" content="Portfolio of Mythili Manoj.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Mythili Manoj</h1>
-  <p>Portfolio — coming soon.</p>
+
+  <header class="site-header">
+    <a class="logo" href="#top">Mythili Manoj</a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- Intro -->
+    <section class="hero">
+      <p class="eyebrow">Portfolio</p>
+      <h1>Mythili Manoj</h1>
+      <p class="lede">A short line about what you do and what you care about. For example: “Designer creating thoughtful, human-centred work.”</p>
+      <a class="button" href="#work">See my work</a>
+    </section>
+
+    <!-- Projects -->
+    <section id="work" class="section">
+      <h2>Selected work</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb"></div>
+          <h3>Project one</h3>
+          <p>One or two sentences describing the project and your role.</p>
+        </article>
+        <article class="card">
+          <div class="thumb"></div>
+          <h3>Project two</h3>
+          <p>One or two sentences describing the project and your role.</p>
+        </article>
+        <article class="card">
+          <div class="thumb"></div>
+          <h3>Project three</h3>
+          <p>One or two sentences describing the project and your role.</p>
+        </article>
+        <article class="card">
+          <div class="thumb"></div>
+          <h3>Project four</h3>
+          <p>One or two sentences describing the project and your role.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="portrait"></div>
+      <div>
+        <h2>About</h2>
+        <p>A few sentences about you: your background, what you're studying or working on, and what kind of opportunities you're looking for.</p>
+        <p>A second short paragraph with something more personal: interests, influences, or what drives your work.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <h2>Let's talk</h2>
+      <p>Open to new projects and collaborations.</p>
+      <p class="links">
+        <a href="mailto:hello@example.com">Email</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Mythili Manoj</p>
+  </footer>
+
 </body>
 </html>
