@@ -13,9 +13,11 @@ start of every session, confirm you're in `mythili-portfolio` and say so.
    laptop's latest work. If it fails or there are local uncommitted changes,
    stop and explain before doing anything else.
 2. Make the changes.
-3. **When a piece of work is done** (and the person is happy with it),
-   commit and `git push` so the live site and the other laptop get it.
-   Don't leave work unpushed at the end of a session.
+3. **After every change**, commit and push straight to `main` so the live
+   site and the other laptop get it right away (this is Eric and Mythili's
+   standing preference — no need to ask first). If working on another
+   branch, push that branch and also push to `main`. Don't leave work
+   unpushed at the end of a session.
 
 If a pull brings in conflicts, explain them in plain words and ask which
 version to keep — don't silently pick one.
@@ -31,8 +33,8 @@ version to keep — don't silently pick one.
 | Stack | Plain HTML, CSS and vanilla JS. No build step. Everything served lives in `public/` (see `wrangler.jsonc`). |
 | Limits | 25 MB per file. Keep the repo well under 1 GB — every old file stays in git history, so compress images/video before adding them. |
 
-- Pushing to `main` publishes to the live site, so only push work that's
-  ready to be seen.
+- Pushing to `main` publishes to the live site (and that's expected after
+  every change).
 - Don't change `wrangler.jsonc` or Cloudflare settings unless asked.
 
 ## Plan: move to Mythili's own accounts
