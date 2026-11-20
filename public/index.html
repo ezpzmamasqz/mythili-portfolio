@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mythili Manoj — Portfolio</title>
   <meta name="description" content="Mythili Manoj — video editor, filmmaker, content strategist and singer. Her work, pinned to a wall.">
-  <meta name="theme-color" content="#5f93a1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Lexend:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#f6db53">
+  <link rel="preload" href="fonts/Garet-Heavy.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Garet-Book.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
 </head>
@@ -20,7 +19,7 @@
     * The visible card is the <button class="card"> part.
     * The pop-up content is the <article class="detail"> part.
   - data-tags="..." decides which filter buttons a card shows up under.
-  - Card colours: c-deep, c-yellow, c-cream, c-mist (see styles.css).
+  - Card colours: c-deep, c-navy, c-blue, c-aqua (see styles.css).
 -->
 
   <header class="top">
@@ -32,7 +31,7 @@
     <section class="board">
 
       <div class="filters" role="group" aria-label="Filter projects by role">
-        <span class="hand filters-label">filter by:</span>
+        <span class="filters-label">follow a thread:</span>
         <button class="chip is-on" data-filter="all">all</button>
         <button class="chip" data-filter="editing">editing</button>
         <button class="chip" data-filter="directing">directing</button>
@@ -55,11 +54,11 @@
             <p class="note-title">I’m Mythili and here is a little get to know me:</p>
             <p>I am a creative with years of experience in social media content creation and strategy. I’ve honed my technical and creative skills across branding, short-form storytelling and audience engagement. I love everything film and media and aim to be part of the film industry. I have been fortunate enough to be part of some very exciting projects and I would like to highlight some of them.</p>
           </div>
-          <p class="hand hint">tap a card to see the full project ↘</p>
+          <p class="hint">tap a card to see the full project ↘</p>
         </li>
 
         <!-- ================= T15 MEDIA ================= -->
-        <li class="pin c-deep" data-tags="editing camera social">
+        <li class="pin c-deep" data-tags="editing directing social camera">
           <button class="card" type="button">
             <img src="images/t15-edit.jpg" alt="">
             <span class="card-title">t15 media.</span>
@@ -84,7 +83,7 @@
         </li>
 
         <!-- ================= MANAS ================= -->
-        <li class="pin c-mist" data-tags="editing directing camera strategy social">
+        <li class="pin c-navy" data-tags="editing directing producing social camera strategy">
           <button class="card" type="button">
             <img src="images/manas-still.jpg" alt="">
             <span class="card-title">manas.</span>
@@ -110,7 +109,7 @@
         </li>
 
         <!-- ================= SWITCH4SCHOOLS ================= -->
-        <li class="pin c-yellow" data-tags="social strategy camera">
+        <li class="pin c-blue" data-tags="editing directing social strategy">
           <button class="card" type="button">
             <img src="images/switch-post.jpg" alt="">
             <span class="card-title">switch4schools.</span>
@@ -135,7 +134,7 @@
         </li>
 
         <!-- ================= FABSAY ================= -->
-        <li class="pin c-cream" data-tags="editing strategy social">
+        <li class="pin c-aqua" data-tags="editing social camera strategy">
           <button class="card" type="button">
             <img src="images/fabsay-2.jpg" alt="">
             <span class="card-title">fabsay.</span>
@@ -188,7 +187,7 @@
         </li>
 
         <!-- ================= MY INSTAGRAM ================= -->
-        <li class="pin c-yellow" data-tags="social editing">
+        <li class="pin c-blue" data-tags="editing directing social camera">
           <button class="card" type="button">
             <img src="images/personal-grid.jpg" alt="">
             <span class="card-title">my instagram.</span>
@@ -212,7 +211,7 @@
         </li>
 
         <!-- ================= THE EXPERIMENT ================= -->
-        <li class="pin c-mist" data-tags="social strategy editing">
+        <li class="pin c-navy" data-tags="editing directing social camera strategy">
           <button class="card" type="button">
             <img src="images/experiment-1.jpg" alt="">
             <span class="card-title">the experiment.</span>
@@ -238,7 +237,7 @@
         </li>
 
         <!-- ================= SCREEN PROJECTS ================= -->
-        <li class="pin c-deep" data-tags="directing producing editing">
+        <li class="pin c-deep" data-tags="editing directing producing camera">
           <button class="card" type="button">
             <img src="images/screen-set.jpg" alt="">
             <span class="card-title">screen projects.</span>
@@ -269,7 +268,7 @@
         </li>
 
         <!-- ================= STOP MOTION ================= -->
-        <li class="pin c-cream" data-tags="directing editing">
+        <li class="pin c-aqua" data-tags="editing directing camera">
           <button class="card" type="button">
             <img src="images/video-record.jpg" alt="">
             <span class="card-title">stop motion &amp; essays.</span>
@@ -295,7 +294,7 @@
         </li>
 
         <!-- ================= ESTHER ANIL ================= -->
-        <li class="pin c-mist" data-tags="strategy editing social">
+        <li class="pin c-navy" data-tags="editing social strategy">
           <button class="card" type="button">
             <img src="images/esther.jpg" alt="">
             <span class="card-title">esther anil.</span>
@@ -317,7 +316,7 @@
         </li>
 
         <!-- ================= RODNEY BEACH ================= -->
-        <li class="pin c-yellow" data-tags="directing editing camera">
+        <li class="pin c-blue" data-tags="editing directing camera">
           <button class="card" type="button">
             <img src="images/rodney.jpg" alt="">
             <span class="card-title">rodney beach’s 50th.</span>
@@ -338,7 +337,7 @@
         </li>
 
         <!-- ================= NINA CHRISTIAN ================= -->
-        <li class="pin c-deep" data-tags="camera">
+        <li class="pin c-deep" data-tags="editing camera">
           <button class="card" type="button">
             <img src="images/nina-2.jpg" alt="">
             <span class="card-title">nina christian.</span>
@@ -362,7 +361,7 @@
         </li>
 
         <!-- ================= AUDIO ================= -->
-        <li class="pin c-cream pin-cut" data-tags="music producing">
+        <li class="pin c-aqua pin-cut" data-tags="editing producing camera music">
           <button class="card" type="button">
             <img class="card-cutout" src="images/cut-mic.webp" alt="">
             <span class="card-title">audio projects.</span>
@@ -396,18 +395,18 @@
         <div>
           <h2>contact me.</h2>
           <dl class="contact-list">
-            <dt class="hand">email</dt><dd><a href="mailto:mythilimanoj@gmail.com">mythilimanoj@gmail.com</a></dd>
-            <dt class="hand">linkedin</dt><dd><a href="http://www.linkedin.com/in/mythili-manoj-b6711932a" target="_blank" rel="noopener">Mythili Manoj</a></dd>
-            <dt class="hand">instagram</dt><dd><a href="https://www.instagram.com/mythileee_/" target="_blank" rel="noopener">@mythileee_</a></dd>
+            <dt>email</dt><dd><a href="mailto:mythilimanoj@gmail.com">mythilimanoj@gmail.com</a></dd>
+            <dt>linkedin</dt><dd><a href="http://www.linkedin.com/in/mythili-manoj-b6711932a" target="_blank" rel="noopener">Mythili Manoj</a></dd>
+            <dt>instagram</dt><dd><a href="https://www.instagram.com/mythileee_/" target="_blank" rel="noopener">@mythileee_</a></dd>
           </dl>
           <p class="thanks">Thank you for reading till the end. You have won yourself a few fun facts about me!</p>
         </div>
         <img class="cutout contact-cutout" src="images/cut-guitar.webp" alt="Mythili laughing with a blue electric guitar" loading="lazy">
       </div>
       <ul class="facts" role="list">
-        <li class="hand">I love cats (not the movie)</li>
-        <li class="hand">I consider myself to be a creative</li>
-        <li class="hand">I have never experienced stage fear (I’m a singer)</li>
+        <li>I love cats (not the movie)</li>
+        <li>I consider myself to be a creative</li>
+        <li>I have never experienced stage fear (I’m a singer)</li>
       </ul>
     </section>
   </main>
@@ -416,7 +415,7 @@
 
   <!-- Pop-up that shows a project's full details -->
   <dialog class="panel" id="panel" aria-label="Project details">
-    <button class="panel-close hand" type="button">back to the wall ✕</button>
+    <button class="panel-close" type="button">back to the wall ✕</button>
     <div class="panel-body"></div>
   </dialog>
 
